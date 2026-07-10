@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="site-main-wrapper">
+        <button class="hamberger">
+            <img src="./images/hamberger.svg" alt="">
+        </button>
+
+        <div class="mobile-nav">
+            <button class="times"><img src="./images/times.svg" alt=""></button>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">My Skills</a></li>
+                <li><a href="#">My Work</a></li>
+                <li><a href="#">My Clients</a></li>
+            </ul>
+        </div>
+        <header>
+            <div class="container">
+                <nav id="main-nav" class="flex items-center justify-between">
+                    <div class="left flex items-center">
+                        <div class="branding">
+                            <img src="./images/logo.svg" alt="">
+                        </div>
+                        <div>
+                            <a href="#">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#services">My Skills</a>
+                            <a href="#work">My Work</a>
+                            <a href="#blog">My Clients</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a href="contact.html"><button class="btn btn-primary">Contact</button></a>
+                    </div>
+                </nav>
+                <div class="hero flex items-center justify-between">
+                    <div class="left flex-1 flex justify-center">
+                        <img src="./images/man.png" alt="">
+                    </div>
+                    <div class="right flex-1">
+                        <h6>David</h6>
+                        <script>
+                            function welcome()
+                            {
+                                window.open("https://docs.google.com/document/d/1tLZ8BaAYvFFJG2HHJHKLuxPlfMnlxWmG/edit")
+                            }
+                        </script>
+                        <h1>I’m a <span>Web developer</span></h1>
+                        <p>I am a good listener and learner, able to communicate well with a group and on an individual level.
+                            I am able to motivate and direct my talents and skills to meet objectives. 
+                            I always seek to achieve a high standard in whatever work I undertake. 
+                            I am well organised with a clear and positive approach to problem solving.</p>
+                        <div>
+                            <button class="btn btn-secondary"onclick="welcome()">DOWNLOAD CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="about">
+            <div class="container flex items-center about-inner-wrap">
+                <div class="flex-1">
+                    <img class="about-me-img" src="./images/man-2.png" alt="">
+                </div>
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div>
+        <h2>Enter Your Data</h2>
+        <form id="portfolio-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" placeholder="Write a short bio about yourself"></textarea>
+
+            <label for="instagram">Instagram Link:</label>
+            <input type="url" id="instagram" placeholder="Instagram link">
+
+            <label for="facebook">Facebook Link:</label>
+            <input type="url" id="facebook" placeholder="Facebook link">
+
+            <label for="twitter">Twitter Link:</label>
+            <input type="url" id="twitter" placeholder="Twitter link">
+
+            <label for="linkedin">LinkedIn Link:</label>
+            <input type="url" id="linkedin" placeholder="LinkedIn link">
+
+            <button type="button" onclick="updatePortfolio()">Update Portfolio</button>
+        </form>
+    </div>
+
+    <div>
+        <h1>About <span id="portfolio-name">Me</span></h1>
+        <h3 id="portfolio-bio">Hello! I'm Johnathan Vics.</h3>
+        <p id="portfolio-description">
+            I am a good listener and learner, able to communicate well with a group and on an individual level.
+            I am able to motivate and direct my talents and skills to meet objectives.
+            I always seek to achieve a high standard in whatever work I undertake.
+            I am well-organised with a clear and positive approach to problem solving.
+        </p>
+        <div class="social">
+            <a id="portfolio-instagram" href="#">Instagram</a>
+            <a id="portfolio-facebook" href="#">Facebook</a>
+            <a id="portfolio-twitter" href="#">Twitter</a>
+            <a id="portfolio-linkedin" href="#">LinkedIn</a>
+        </div>
+    </div>
+
+    <script>
+        function updatePortfolio() {
+            // Get the user input
+            const name = document.getElementById('name').value;
+            const bio = document.getElementById('bio').value;
+            const instagram = document.getElementById('instagram').value;
+            const facebook = document.getElementById('facebook').value;
+            const twitter = document.getElementById('twitter').value;
+            const linkedin = document.getElementById('linkedin').value;
+
+            // Update the portfolio content
+            document.getElementById('portfolio-name').innerText = name || "Me";
+            document.getElementById('portfolio-bio').innerText = bio || "Hello! I'm Johnathan Vics.";
+            document.getElementById('portfolio-description').innerText = bio || "I am a good listener and learner, able to communicate well with a group and on an individual level. I am able to motivate and direct my talents and skills to meet objectives. I always seek to achieve a high standard in whatever work I undertake. I am well-organized with a clear and positive approach to problem solving.";
+
+            // Update social media links
+            document.getElementById('portfolio-instagram').href = instagram || "#";
+            document.getElementById('portfolio-facebook').href = facebook || "#";
+            document.getElementById('portfolio-twitter').href = twitter || "#";
+            document.getElementById('portfolio-linkedin').href = linkedin || "#";
+        }
+    </script>
+</body>
+</html>
+
+                </div>
+            </div>
+        </section>
+        <section id="services" class="services">
+            <div class="container">
+                <h1 class="section-heading"><span>My </span>Skills</h1>
+                <p> I am highly expert at my skills </p>
+                
+                <!-- Form to add a new skill -->
+                <div>
+                    <h3>Add New Skill</h3>
+                    <form id="add-skill-form">
+                        <label for="skill-name">Skill Name:</label>
+                        <input type="text" id="skill-name" required>
+                        <label for="skill-description">Description:</label>
+                        <input type="text" id="skill-description" required>
+                        <label for="skill-image">Upload Image:</label>
+                        <input type="file" id="skill-image" accept="image/*" required>
+                        <button type="submit">Add Skill</button>
+                    </form>
+                </div>
+            
+                <div class="card-wrapper">
+                    <div class="card">
+                        <img src="./images/graphix.png" height="110" width="107" alt="">
+                        <h2>Graphic Design</h2>
+                        <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./images/web.png" height="110" width="107" alt="">
+                        <h2>Web Development</h2>
+                        <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./images/4media.png" height="110" width="107" alt="">
+                        <h2>Media Marketing</h2>
+                        <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                // Handle form submission
+                document.getElementById('add-skill-form').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent form submission from reloading the page
+            
+                    // Get user input
+                    const skillName = document.getElementById('skill-name').value;
+                    const skillDescription = document.getElementById('skill-description').value;
+                    const skillImage = document.getElementById('skill-image').files[0]; // Get the file object
+            
+                    // Check if an image file is selected
+                    if (skillImage) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            // Create new skill card
+                            const newCard = document.createElement('div');
+                            newCard.classList.add('card');
+            
+                            // Set the image source to the uploaded image
+                            newCard.innerHTML = `
+                                <img src="${e.target.result}" height="110" width="107" alt="">
+                                <h2>${skillName}</h2>
+                                <p>${skillDescription}</p>
+                            `;
+            
+                            // Append the new card to the card wrapper
+                            document.querySelector('.card-wrapper').appendChild(newCard);
+                        };
+            
+                        // Read the file as a data URL (base64)
+                        reader.readAsDataURL(skillImage);
+                    }
+            
+                    // Reset form fields after submission
+                    document.getElementById('add-skill-form').reset();
+                });
+            </script>
+            
+            
+        </section>
+        <section class="freelancer">
+            <h1>I Am Available For Freelancer.</h1>
+            <script>
+                function welcome(){
+                    window.open("https://docs.google.com/document/d/1tLZ8BaAYvFFJG2HHJHKLuxPlfMnlxWmG/edit")
+                }
+            </script>
+            <!-- <p>We provide high standar clean website for your business solutions</p> -->
+            <button class="btn btn-secondary"onclick="welcome()">DOWNLOAD CV</button>
+        </section>
+        <section id="blog" class="blog">
+            <div class="container">
+                <h1 class="section-heading"><span>Work</span>Under</h1>
+                <!-- <p>We provide high standard clean websites for your business solutions</p> -->
+                <div class="card-wrapper" id="clientTestimonials">
+                    <!-- Existing testimonials go here -->
+                    <div>
+                        <img src="./images/lady.png" alt="">
+                        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <span>- John Doel, Company ABC</span>
+                    </div>
+                    <!-- Add more existing testimonials as needed -->
+                </div>
+                
+                <!-- New Client Input Form -->
+                <h2>Add a New Client Testimonial</h2>
+                <form id="clientForm" onsubmit="addClient(event)">
+                    <div class="input-wrap">
+                        <input type="text" id="clientName" placeholder="Client Name *" required>
+                        <div class="logo-input-container">
+                            <input type="file" id="clientLogo" accept="image/*" required>
+                            <label for="clientLogo" class="logo-label">
+                                <div class="logo-preview">
+                                    <img src="" alt="Client Logo" id="logoImage" class="logo-image" />
+                                    <span class="plus-sign">+</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="testimonial-wrap">
+                        <textarea id="clientTestimonial" cols="30" rows="5" placeholder="Client Testimonial *" required></textarea>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button type="submit" class="btn btn-primary">Add Testimonial</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <script>
+            function addClient(event) {
+                event.preventDefault(); // Prevent form submission
+        
+                const name = document.getElementById('clientName').value;
+                const logoInput = document.getElementById('clientLogo');
+                const testimonial = document.getElementById('clientTestimonial').value;
+        
+                // Create a FileReader to read the uploaded image
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    // Create a new testimonial card
+                    const newCard = document.createElement('div');
+                    newCard.classList.add('testimonial-card'); // Add a class for styling
+                    newCard.innerHTML = `
+                        <div class="logo-container">
+                            <img src="${e.target.result}" alt="${name}" class="client-logo">
+                        </div>
+                        <p>"${testimonial}"</p>
+                        <span>- ${name}</span>
+                    `;
+        
+                    // Append the new card to the testimonials section
+                    document.getElementById('clientTestimonials').appendChild(newCard);
+                };
+        
+                // Read the uploaded file as a data URL
+                reader.readAsDataURL(logoInput.files[0]);
+        
+                // Clear the form inputs
+                document.getElementById('clientForm').reset();
+                document.getElementById('logoImage').src = ''; // Clear logo preview
+            }
+        
+            // Preview the logo on file input change
+            document.getElementById('clientLogo').addEventListener('change', function() {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('logoImage').src = e.target.result;
+                };
+                reader.readAsDataURL(this.files[0]);
+            });
+        </script>
+        
+        <style>
+            .input-wrap {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+        
+            .logo-input-container {
+                display: flex;
+                align-items: center; /* Center vertically */
+                position: relative;
+                margin-top: 10px; /* Space above the logo input */
+            }
+        
+            .logo-label {
+                cursor: pointer;
+                margin-left: 10px; /* Space between input and logo */
+                position: relative;
+            }
+        
+            .logo-preview {
+                width: 147px; /* Fixed width for logo */
+                height: 147px; /* Fixed height for logo */
+                overflow: hidden;
+                border-radius: 50%; /* Makes the logo circular */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 2px dashed #ccc; /* Optional border for the logo area */
+                position: relative;
+            }
+        
+            .logo-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensure the image covers the circular area */
+                display: none; /* Hide by default */
+            }
+        
+            #clientLogo {
+                display: none; /* Hide the file input */
+            }
+        
+            .plus-sign {
+                position: absolute;
+                font-size: 48px; /* Size of the plus sign */
+                color: #ccc; /* Color of the plus sign */
+                pointer-events: none; /* Prevent interaction with the plus sign */
+            }
+        
+            .testimonial-wrap {
+                margin-top: 10px; /* Space above testimonial textarea */
+            }
+        
+            .client-logo {
+                width: 147px; /* Ensure the displayed logo is 147px */
+                height: 147px; /* Ensure the displayed logo is 147px */
+                object-fit: cover; /* Keep aspect ratio */
+                border-radius: 50%; /* Make it circular */
+            }
+        
+            .testimonial-card {
+                margin: 10px; /* Spacing between testimonial cards */
+                text-align: center; /* Center text in the card */
+            }
+        </style>
+        <section id="work" class="work">
+            <div class="container">
+                <h1 class="section-heading"><span>My</span> Works</h1>
+                <p>I provide high standar clean solution for problems </p>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Category</span>
+                            <a href="#">Web development</a>
+                        </div>
+                        <img src="./images/gp2.png"height="288"width="88" alt="">
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Category</span>
+                            <a href="#">Graphic Design</a>
+                        </div>
+                        <img src="./images/gp1.png"height="288"width="88" alt="">
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Category</span>
+                            <a href="#">Media Markating</a>
+                        </div>
+                        <img src="./images/gp3.png" height="288"width="88" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Contact Me</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1), rgba(255, 154, 0, 1), rgba(208, 222, 33, 1), rgba(79, 220, 74, 1), rgba(0, 221, 221, 1), rgba(0, 0, 255, 1), rgba(139, 0, 255, 1)); 
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-container {
+            width: 90%;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2, h3 {
+            color: #fff;
+        }
+        p, a {
+            color: #e0e0e0;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            padding: 10px;
+            background-color: #53aeae;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3a9999;
+        }
+        .message-container {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            text-align: left;
+        }
+        .message {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-container">
+    <h2>Contact Me</h2>
+    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+
+    <h3>Send a Message</h3>
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<div class="message-container" id="messageContainer">
+    <h2>Messages Received</h2>
+    <div id="messages"></div>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = this.name.value;
+        const email = this.email.value;
+        const message = this.message.value;
+
+        // Store message in local storage
+        const messages = JSON.parse(localStorage.getItem('messages')) || [];
+        messages.push({ name, email, message });
+        localStorage.setItem('messages', JSON.stringify(messages));
+
+        // Clear the form
+        this.reset();
+
+        // Display messages
+        displayMessages();
+    });
+
+    function displayMessages() {
+        const messages = JSON.parse(localStorage.getItem('messages')) || [];
+        const messagesDiv = document.getElementById('messages');
+        messagesDiv.innerHTML = '';
+
+        messages.forEach(msg => {
+            messagesDiv.innerHTML += <div class="message"><strong>${msg.name} (${msg.email}):</strong><br>${msg.message}</div>;
+        });
+    }
+
+    // Display messages on page load
+    displayMessages();
+</script>
+
+</body>
+</html>
+
+                </div>
+
+                <!-- <form action="">
+                    <div class="input-wrap">
+                        <input type="text" placeholder="Your Name *">
+                        <input type="email" placeholder="Your Email *">
+                    </div>
+                    <div class="input-wrap-2">
+                        <input type="text" placeholder="Your Subject...">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button class="btn btn-primary">Send Message</button>
+                    </div>
+                </form> -->
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

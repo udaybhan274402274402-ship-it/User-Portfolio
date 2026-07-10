@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Login/Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #6a82fb, #fc5c7d);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 0, 255, 0.7);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 0, 255, 1);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff7e5f;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ff7e5f;
+            border-radius: 5px;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            border: 1px solid #6a82fb;
+        }
+
+        button {
+            padding: 10px;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .toggle {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .toggle a {
+            color: #6a82fb;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="form-title">Login</h1>
+    <form id="auth-form" onsubmit="handleAuth(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Login</button>
+    </form>
+    <div class="toggle">
+        <span>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></span>
+    </div>
+</div>
+
+<script>
+    function showSignup() {
+        document.getElementById('form-title').innerText = 'Sign Up';
+        document.getElementById('auth-form').innerHTML = `
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="password" required>
+            <button type="submit">Sign Up</button>
+        `;
+        document.querySelector('.toggle span a').innerText = 'Already have an account? Sign in';
+        document.querySelector('.toggle span a').setAttribute('onclick', 'showLogin()');
+    }
+
+    function showLogin() {
+        document.getElementById('form-title').innerText = 'Login';
+        document.getElementById('auth-form').innerHTML = `
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        `;
+        document.querySelector('.toggle span a').innerText = "Don't have an account? Sign up";
+        document.querySelector('.toggle span a').setAttribute('onclick', 'showSignup()');
+    }
+
+    function handleAuth(event) {
+        event.preventDefault(); 
+        const action = document.getElementById('form-title').innerText;
+
+        if (action === 'Login') {
+            alert("Logged in successfully!");
+            window.location.href = "index.html"; 
+        } else {
+            alert("Signed up successfully!");
+            window.location.href = "index.html";
+        }
+    }
+</script>
+
+</body>
+</html>
